@@ -7,7 +7,7 @@ OBJ = $(SRC:.c=.o)
 $(NAME): $(OBJ) 
 	make -C libft
 	make -C gnl
-	gcc -I pipex.h libft/libft.a gnl/gnl.a $(OBJ) -o pipex
+	gcc libft/libft.a gnl/gnl.a $(OBJ) -o pipex
 
 all: $(NAME)
 clean: 
