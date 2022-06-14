@@ -6,7 +6,7 @@
 /*   By: mde-arpe <mde-arpe@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 19:32:20 by mde-arpe          #+#    #+#             */
-/*   Updated: 2022/06/06 18:01:14 by mde-arpe         ###   ########.fr       */
+/*   Updated: 2022/06/15 01:01:42 by mde-arpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	wait_and_free(t_pid	*first)
 		waitpid(first->pid, NULL, 0);
 		aux = first;
 		first = first->next;
-		free(first);
+		free(aux);
 	}
 }
 
